@@ -1,0 +1,25 @@
+From 01893ba5c18101df823f08e3a8dc71dbd6738f33 Mon Sep 17 00:00:00 2001
+From: wouterlucas <wouter@wouterlucas.com>
+Date: Tue, 31 Jul 2018 20:37:32 -0700
+Subject: [PATCH] Skip compilation of the dvb apps utils
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 105c460..b3bbff1 100644
+--- a/Makefile
++++ b/Makefile
+@@ -10,7 +10,7 @@ DVB_API_MINOR := $(word 3, $(shell grep -m1 "DVB_API_VERSION_MINOR" $(VERSION_FI
+ 
+ all clean install:
+ 	$(MAKE) -C lib $@
+-	$(MAKE) -C util $@
++	# $(MAKE) -C util $@
+ 
+ update:
+ 	@echo "Pulling changes & updating from master repository"
+-- 
+2.17.0
+
