@@ -28,8 +28,7 @@ PACKAGECONFIG[tvcontrol_linuxtv] = " \
     -DWPEFRAMEWORK_PLUGINS_TVCONTROL_COUNTRY_REGION_ID=${COUNTRY_REGION_ID} \
     -DWPEFRAMEWORK_PLUGINS_TVCONTROL_COUNTRY_CODE=${COUNTRY_CODE} \
     -DWPEFRAMEWORK_PLUGINS_TVCONTROL_TUNE_PARAM=${TUNE_PARAM} \
-    ,-DWPEFRAMEWORK_PLUGIN_TVCONTROL=OFF \
-    ,sqlite,inotify-tools gstreamer1.0-plugins-bad-dvb gstreamer1.0-libav \
+    ,,sqlite,inotify-tools gstreamer1.0-plugins-bad-dvb gstreamer1.0-libav \
 "
 
 # GENERIC
