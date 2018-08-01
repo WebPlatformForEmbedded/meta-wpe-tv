@@ -43,10 +43,10 @@ do_install() {
         install -d ${D}/lib/firmware
         install -m 0644 ${WORKDIR}/*.fw ${D}/lib/firmware/
     fi
-    cp -pPR ${S}/util/szap/channels-conf* ${D}/${docdir}/dvb-apps/szap/
-    cp -pPR ${S}/util/szap/README   ${D}/${docdir}/dvb-apps/szap/
+    cp -pPR --no-preserve=ownership ${S}/util/szap/channels-conf* ${D}/${docdir}/dvb-apps/szap/
+    cp -pPR --no-preserve=ownership ${S}/util/szap/README   ${D}/${docdir}/dvb-apps/szap/
 
-    cp -pPR ${WORKDIR}/dvb-scan-table/* ${D}/usr/share/dvb
+    cp -pPR --no-preserve=ownership ${WORKDIR}/dvb-scan-table/* ${D}/usr/share/dvb
 }
 
 python populate_packages_prepend () {
