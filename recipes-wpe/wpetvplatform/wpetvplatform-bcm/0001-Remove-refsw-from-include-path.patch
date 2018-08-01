@@ -1,0 +1,52 @@
+From ec5430511dd451bf7944c068290b5d85142cf817 Mon Sep 17 00:00:00 2001
+From: wouterlucas <wouter@wouterlucas.com>
+Date: Wed, 1 Aug 2018 14:19:42 -0700
+Subject: [PATCH] Remove /refsw from include path
+
+Signed-off-by: wouterlucas <wouter@wouterlucas.com>
+---
+ TVPlatformImplementation.cpp |  2 +-
+ TVPlatformImplementation.h   | 14 +++++++-------
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/TVPlatformImplementation.cpp b/TVPlatformImplementation.cpp
+index c338597..a3f2291 100644
+--- a/TVPlatformImplementation.cpp
++++ b/TVPlatformImplementation.cpp
+@@ -3,7 +3,7 @@
+ 
+ #include <arpa/inet.h>
+ #include <iostream>
+-#include <refsw/ts_psi.h>
++#include <ts_psi.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <sys/time.h>
+diff --git a/TVPlatformImplementation.h b/TVPlatformImplementation.h
+index 9e13c9b..ceea8c1 100644
+--- a/TVPlatformImplementation.h
++++ b/TVPlatformImplementation.h
+@@ -8,13 +8,13 @@
+ #include <map>
+ #include <mutex>
+ #include <queue>
+-#include <refsw/nexus_config.h>
+-#include <refsw/nexus_frontend.h>
+-#include <refsw/nexus_message.h>
+-#include <refsw/nexus_parser_band.h>
+-#include <refsw/nexus_platform.h>
+-#include <refsw/nexus_simple_audio_decoder.h>
+-#include <refsw/nexus_simple_video_decoder.h>
++#include <nexus_config.h>
++#include <nexus_frontend.h>
++#include <nexus_message.h>
++#include <nexus_parser_band.h>
++#include <nexus_platform.h>
++#include <nexus_simple_audio_decoder.h>
++#include <nexus_simple_video_decoder.h>
+ #ifndef NO_NXCLIENT
+ #include <refsw/nxclient.h>
+ #endif
+-- 
+2.7.4
+
